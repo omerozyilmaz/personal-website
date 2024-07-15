@@ -137,3 +137,113 @@ label:active:after {
 .pd-r10px {
   padding-right: 10px;
 }
+/* Hero Container*/
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left-first-div {
+  color: #4338ca;
+  font-size: 18px;
+}
+
+.hero-left h2 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #1f2937;
+  font-size: 85px;
+}
+
+.hero-left p {
+  color: #6b7280;
+  font-size: 22.3px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+}
+
+.btn {
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.primary-btn {
+  background-color: #3730a3;
+  color: #fff;
+  border: none;
+}
+
+.scalesf {
+  transform: scale(0.4);
+}
+
+.secondary-btn {
+  background-color: #fff;
+  color: #3730a3;
+  border: 1px solid #3730a3;
+}
+
+.secondary-btn i {
+  margin-right: 5px;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-right img {
+  width: 500px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+/*Skill*/
+.skills-section {
+  text-align: start;
+  padding: 50px 0;
+}
+
+.skills-title {
+  font-size: 64px;
+  color: #1f2937;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 20px;
+}
+
+.skill-name {
+  font-size: 32px;
+  color: #4338ca;
+  margin-bottom: 20px;
+}
+
+.skill-description {
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.5;
+}
