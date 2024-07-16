@@ -7,22 +7,22 @@ export default function Skills() {
         <div class="skill">
           <h2 class="skill-name">Java Script</h2>
           <p class="skill-description">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            I can create impressive and interactive user interfaces using
+            JavaScript.
           </p>
         </div>
         <div class="skill">
           <h2 class="skill-name">React.Js</h2>
           <p class="skill-description">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            I have experience in developing user-friendly and performant web
+            applications with React.
           </p>
         </div>
         <div class="skill">
-          <h2 class="skill-name">Node.Js</h2>
+          <h2 class="skill-name">C#</h2>
           <p class="skill-description">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            My proficiency in building modern C# applications enables me to
+            develop robust and scalable software.
           </p>
         </div>
       </div>

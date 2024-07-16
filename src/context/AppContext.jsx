@@ -1,4 +1,5 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
+import data from "../data.json"; // Import the combined JSON file
 
 const AppContext = createContext();
 
@@ -8,12 +9,11 @@ const AppProvider = ({ children }) => {
 
   const [isDarkMode, setIsDarkMode] = useState(storedDarkMode);
   const [language, setLanguage] = useState(storedLanguage);
-  const [userInfo, setUserInfo] = useState({
-    name: "Ömer Özyılmaz",
-    email: "omerozylmaz2@gmail.com",
-  });
+  const [userInfo, setUserInfo] = useState({});
+  const [appData, setAppData] = useState({});
 
   useEffect(() => {
+    setAppData(data);
     document.body.classList.toggle("dark-mode", isDarkMode);
   }, [isDarkMode]);
 
@@ -34,7 +34,14 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ isDarkMode, language, userInfo, toggleDarkMode, switchLanguage }}
+      value={{
+        isDarkMode,
+        language,
+        userInfo,
+        appData,
+        toggleDarkMode,
+        switchLanguage,
+      }}
     >
       {children}
     </AppContext.Provider>

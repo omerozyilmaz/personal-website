@@ -1,13 +1,13 @@
-import React from "react";
-
-const contactData = {
-  email: "omerozylmaz2@gmail.com",
-  github: "https://github.com/omerozyilmaz",
-  linkedin: "https://www.linkedin.com/in/omerozyilmaz/",
-  personalBlog: "",
-};
+import React, { useContext } from "react";
+import { AppContext } from "../context/AppContext";
 
 export default function Footer() {
+  const { appData } = useContext(AppContext);
+
+  if (!appData.contactData) return null;
+
+  const { email, github, linkedin, personalBlog } = appData.contactData;
+
   return (
     <div className="frBdClr">
       <div className="contact-container">
@@ -15,19 +15,18 @@ export default function Footer() {
           Let's work together <br /> on your next product.
         </h2>
         <p>
-          {/*<img src={emailIcon} alt="email" className="email-icon" />*/}
-          <a href={`mailto:${contactData.email}`} className="email-link">
-            {contactData.email}
+          <a href={`mailto:${email}`} className="email-link">
+            {email}
           </a>
         </p>
         <div className="contact-links">
-          <a href={contactData.personalBlog} className="contact-link">
+          <a href={personalBlog} className="contact-link">
             Personal Blog
           </a>
-          <a href={contactData.github} className="contact-link github-link">
+          <a href={github} className="contact-link github-link">
             Github
           </a>
-          <a href={contactData.linkedin} className="contact-link linkedin-link">
+          <a href={linkedin} className="contact-link linkedin-link">
             Linkedin
           </a>
         </div>
