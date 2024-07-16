@@ -1,21 +1,28 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #252128;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
 }
+hr {
+  background-color: #bab2e7;
+}
+
 .greyColor {
   color: #6b7280;
 }
+
 .blueColor {
   color: #3730a3;
 }
+
 .mainContainer {
   padding-left: 80px;
   padding-right: 110px;
 }
+
 /* Header Component */
-/*White mode */
+/* White mode */
 .header {
   display: flex;
   justify-content: space-between;
@@ -23,9 +30,10 @@ body {
   padding-top: 20px;
   padding-bottom: 65px;
 }
+
 .logo {
-  background-color: #eeebff;
-  color: #7b61ff;
+  background-color: #4731d3;
+  color: #8f88ff;
   width: 58px;
   height: 58px;
   display: flex;
@@ -33,9 +41,14 @@ body {
   justify-content: center;
   border-radius: 50%;
 }
+.dark-mode .logo {
+  background-color: #eeebff;
+  color: #7b61ff;
+}
 .logo span {
   transform: scale(1.7) rotate(45deg);
 }
+
 .nav {
   display: flex;
   align-items: center;
@@ -49,53 +62,62 @@ body {
   transition: border 0.3s ease, color 0.3s ease;
 }
 
-.nav-item:hover {
-  border: 2px solid #3730a3;
+.nav-item:last-child {
+  border: 2px solid #8f88ff;
+}
+.dark-mode .nav-item:last-child {
+  background-color: #ffffff;
 }
 
 .nav-item a {
-  color: #6b7280;
+  color: #8f88ff;
   text-decoration: none;
   font-size: 16px;
+}
+.dark-mode .nav-item a {
+  color: #6b7280;
 }
 
 .nav-item:hover a,
 .nav-item a:focus {
-  color: #3730a3;
+  color: #8f88ff;
 }
 
 .nav-item:last-child {
   margin-right: 0;
 }
+
 /* NodeSwitch switch checkbox */
-/* Hilal yapabilmek için üzerine bir tane daha yuvarlak koydum ve ona opak özelliği vererek animasyon yaptım*/
 input[type="checkbox"] {
   width: 0;
   height: 0;
   visibility: hidden;
 }
+
 label {
   display: block;
   width: 40px;
   height: 20px;
   background-color: #3a3a3a;
-  border-radius: 10px; /* Boyutları güncelledik, buna göre radius ayarladık */
+  border-radius: 10px;
   position: relative;
   cursor: pointer;
   transition: 0.5s;
   box-shadow: 0 0 20px #477a8550;
 }
+
 label::after {
   content: "";
   width: 15px;
   height: 15px;
   background-color: #ffe86e;
   position: absolute;
-  border-radius: 50%; /* Yuvarlak yapmak için %50 border-radius */
-  top: 2.5px; /* Label yüksekliği - yuvarlak yüksekliği / 2 */
-  left: 2.5px; /* Aynı şekilde soldan */
+  border-radius: 50%;
+  top: 2.5px;
+  left: 2.5px;
   transition: 0.5s;
 }
+
 label::before {
   content: "";
   width: 15px;
@@ -103,68 +125,90 @@ label::before {
   background-color: #3a3a3a;
   position: absolute;
   border-radius: 50%;
-  top: 2.5px; /* İç yuvarlağı aynı hizaya getirmek için */
-  left: 5.5px; /* Sarı yuvarlağın solundan 4.5px sağa kaydırmak için */
+  top: 2.5px;
+  left: 5.5px;
   transition: 0.5s;
   z-index: 2;
 }
+
 input:checked + label::before {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
 }
+
 input:checked + label:after {
-  left: calc(100% - 2.5px); /* Sol kenardan boşluk bırak */
+  left: calc(100% - 2.5px);
   transform: translateX(-100%);
 }
+
 input:checked + label {
   background-color: #4731d3;
 }
+
 label:active:after {
-  width: 15px; /* Aktif olduğunda genişleme istemiyoruz */
+  width: 15px;
 }
-/*Node Switch */
+
+/* Node Switch */
 .nodeSwitch {
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
   color: #777777;
 }
+
 .darkMode-left {
   display: flex;
   align-items: end;
 }
+
 .pd-r10px {
   padding-right: 10px;
 }
-/* Hero Container*/
+
+/* Hero Container */
 .hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
+.pdbt20px {
+  padding-bottom: 20px;
+}
+.pd-bt-tp10px {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 .hero-left {
   flex: 1;
 }
 
 .hero-left-first-div {
-  color: #4338ca;
+  color: #b7aaff;
   font-size: 18px;
 }
-
+.dark-mode .hero-left-first-div {
+  color: #4338ca;
+}
 .hero-left h2 {
   margin-top: 20px;
   margin-bottom: 0;
-  color: #1f2937;
+  color: #aebccf;
   font-size: 85px;
+}
+.dark-mode .hero-left h2 {
+  color: #1f2937;
 }
 
 .hero-left p {
-  color: #6b7280;
+  color: #ffffff;
   font-size: 22.3px;
   margin-top: 20px;
   line-height: 1.5;
+}
+.dark-mode .hero-left p {
+  color: #6b7280;
 }
 
 .hero-buttons {
@@ -182,9 +226,15 @@ label:active:after {
 }
 
 .primary-btn {
+  background-color: #e1e1ff;
+  color: #000000;
+  width: 100px;
+  border: none;
+  justify-content: center;
+}
+.dark-mode .primary-btn {
   background-color: #3730a3;
   color: #fff;
-  border: none;
 }
 
 .scalesf {
@@ -192,9 +242,13 @@ label:active:after {
 }
 
 .secondary-btn {
+  background-color: #383838;
+  color: #e1e1ff;
+  border: 1px solid #8f88ff;
+}
+.dark-mode .secondary-btn {
   background-color: #fff;
   color: #3730a3;
-  border: 1px solid #3730a3;
 }
 
 .secondary-btn i {
@@ -213,21 +267,16 @@ label:active:after {
   object-fit: cover;
   border-radius: 10%;
 }
-/*Skill*/
+
+/* Skill */
 .skills-section {
   text-align: start;
   padding: 50px 0;
 }
 
-.skills-title {
-  font-size: 64px;
-  color: #1f2937;
-  margin-bottom: 40px;
-}
-
 .skills-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .skill {
@@ -238,12 +287,351 @@ label:active:after {
 
 .skill-name {
   font-size: 32px;
-  color: #4338ca;
+  color: #b7aaff;
   margin-bottom: 20px;
+  font-weight: 300;
+}
+.dark-mode .skill-name {
+  color: #4338ca;
+}
+.dark-mode .small-title {
+  color: #1f2937;
 }
 
 .skill-description {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.dark-mode .skill-description {
   color: #6b7280;
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Profile Row */
+.details-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.bkstng {
+  color: #ffffff;
+  width: 150px;
+  margin: 0;
+  font-weight: 550;
+}
+.dark-mode .bkstng {
+  color: #000000;
+}
+
+.profile-item p {
+  margin: 0;
+  font-size: 16px;
+}
+.dark-mode .profile-item p {
+  color: #000000;
+}
+
+.about-me p {
   font-size: 16px;
   line-height: 1.5;
+  margin: 10px 0;
+}
+.dark-mode .about-me p {
+  color: #000000;
+}
+
+/* Profile Left and Right Containers */
+.profile-left,
+.profile-right {
+  flex: 1;
+}
+
+.profile-right {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Projects section */
+.projects {
+  padding-bottom: 80px;
+}
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 350px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+.dark-mode .heightmincard {
+  color: #000000;
+}
+.project-image {
+  width: 280px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.technologies {
+  margin: 8px 0;
+}
+
+.tech-badge {
+  display: initial;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin: 4px;
+  border: 2px solid #8f88ff;
+  color: #8f88ff;
+  width: 80px;
+  align-items: center;
+}
+.dark-mode .tech-badge {
+  color: #3730a3;
+  background-color: #383838;
+}
+.heightmincard {
+  height: 180px;
+}
+.links a {
+  display: inline-block;
+  margin: 8px;
+  color: #8f88ff;
+}
+.dark-mode .links a {
+  color: #3730a3;
+}
+.links a:nth-child(2) {
+  margin-left: 150px;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer section */
+.contact-container {
+  text-align: start;
+  padding-left: 80px;
+  padding-right: 110px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.frBdClr {
+  background-color: #141414;
+}
+.dark-mode .frBdClr {
+  background-color: #f9f9f9;
+}
+.contact-container h2 {
+  color: #aebccf;
+  letter-spacing: 2px;
+}
+.dark-mode .contact-container h2 {
+  color: #1f2937;
+}
+
+.contact-container p {
+  font-size: 18px;
+  color: #aebccf;
+}
+
+.email-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.email-link {
+  color: #bab2e7;
+}
+.dark-mode .email-link {
+  color: #af0c48;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.contact-link {
+  color: #e1e1ff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.dark-mode .contact-link {
+  color: #0a0a14;
+}
+
+.github-link {
+  color: #00ab6b;
+}
+
+.dark-mode .github-link {
+  color: #00ab6b;
+}
+
+.linkedin-link {
+  color: #0077b5;
+}
+
+.dark-mode .linkedin-link {
+  color: #0077b5;
+}
+
+/*Genel titler*/
+.small-title {
+  font-size: 50px;
+  color: #aebccf;
+  margin-bottom: 40px;
+}
+.small-title-v2 {
+  font-size: 40px;
+  color: #aebccf;
+  margin-bottom: 40px;
+}
+
+/* DARK MODE*/
+body.dark-mode {
+  background-color: #ffff;
+}
+
+.dark-mode .pd-r10px {
+  color: #252128;
+}
+/* Add more dark mode styles as needed */
+
+@media screen and (max-width: 1200px) {
+  .mainContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-left h2 {
+    font-size: 70px;
+  }
+
+  .hero-right img {
+    width: 400px;
+    height: 350px;
+  }
+
+  .skill {
+    max-width: 250px;
+  }
+
+  .skill-name {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-left h2 {
+    font-size: 60px;
+  }
+
+  .hero-right img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .skill {
+    max-width: 200px;
+  }
+
+  .skill-name {
+    font-size: 24px;
+  }
+
+  .projects .project-card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-left h2 {
+    font-size: 50px;
+  }
+
+  .hero-right img {
+    width: 250px;
+    height: 200px;
+  }
+
+  .skill {
+    max-width: 150px;
+  }
+
+  .skill-name {
+    font-size: 20px;
+  }
+
+  .projects .project-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .hero-left h2 {
+    font-size: 40px;
+  }
+
+  .hero-right img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .skill {
+    max-width: 100%;
+  }
+
+  .skill-name {
+    font-size: 18px;
+  }
 }

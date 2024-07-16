@@ -6,20 +6,27 @@ import Projects from "./components/Projects";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import NodeSwitch from "./components/NodeSwitch";
-import { AppProvider } from "./context/AppContext.jsx";
+import { AppContext } from "./context/AppContext";
+import { useContext } from "react";
 
 function App() {
+  const { isDarkMode } = useContext(AppContext);
+
   return (
-    <div className="greyColor mainContainer">
-      <AppProvider>
+    <div>
+      <div
+        className={`mainContainer ${isDarkMode ? "dark-mode" : "greyColor"}`}
+      >
         <NodeSwitch />
         <Header />
         <Hero />
         <Skills />
-        <Projects />
+        <hr />
         <Profile />
-        <Footer />
-      </AppProvider>
+        <hr />
+        <Projects />
+      </div>
+      <Footer />
     </div>
   );
 }

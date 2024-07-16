@@ -1,0 +1,37 @@
+{
+  "contactData": {
+    "email": "omerozylmaz2@gmail.com",
+    "github": "https://github.com/omerozyilmaz",
+    "linkedin": "https://www.linkedin.com/in/omerozyilmaz/",
+    "personalBlog": ""
+  },
+  "heroData": {
+    "name": "Ömer Özyılmaz",
+    "title": "Creative thinker\nMinimalism lover",
+    "description": "Hi, I’m Ömer. I’m a full-stack developer. If you are looking for a Developer who can craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
+    "buttons": [
+      {
+        "text": "Hire me"
+      },
+      {
+        "text": "Github",
+        "icon": "path/to/github/icon"
+      },
+      {
+        "text": "Linkedin",
+        "icon": "path/to/linkedin/icon"
+      }
+    ],
+    "profileImage": "path/to/profile/image"
+  },
+  "profileData": {
+    "dateOfBirth": "03.02.1998",
+    "city": "Ankara",
+    "education": "Gazi Üniv. Chemical Engineer, 2022",
+    "preferredRole": "Frontend, UI",
+    "aboutMe": [
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+      "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+    ]
+  }
+}

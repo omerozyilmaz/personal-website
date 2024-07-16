@@ -1,6 +1,4 @@
-import React from "react";
-import { useState } from "react";
-import { createContext } from "react";
+import React, { useState, createContext, useEffect } from "react";
 
 const AppContext = createContext();
 
@@ -15,6 +13,10 @@ const AppProvider = ({ children }) => {
     email: "omerozylmaz2@gmail.com",
   });
 
+  useEffect(() => {
+    document.body.classList.toggle("dark-mode", isDarkMode);
+  }, [isDarkMode]);
+
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => {
       localStorage.setItem("isDarkMode", !prevMode);
@@ -25,10 +27,11 @@ const AppProvider = ({ children }) => {
   const switchLanguage = () => {
     setLanguage((prevLanguage) => {
       const newLanguage = prevLanguage === "EN" ? "TR" : "EN";
-      localStorage.setItem(newLanguage);
-      return prevLanguage;
+      localStorage.setItem("language", newLanguage);
+      return newLanguage;
     });
   };
+
   return (
     <AppContext.Provider
       value={{ isDarkMode, language, userInfo, toggleDarkMode, switchLanguage }}
