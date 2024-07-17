@@ -540,6 +540,10 @@ body.dark-mode {
 }
 
 @media screen and (max-width: 992px) {
+  .profile-container {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -633,5 +637,9 @@ body.dark-mode {
 
   .skill-name {
     font-size: 18px;
+  }
+  .profile-container {
+    flex-wrap: wrap;
+    justify-content: start;
   }
 }
