@@ -195,7 +195,7 @@ label:active:after {
   margin-top: 20px;
   margin-bottom: 0;
   color: #1f2937;
-  font-size: 85px;
+  font-size: 70px;
 }
 .dark-mode .hero-left h2 {
   color: #aebccf;
@@ -522,7 +522,7 @@ body.dark-mode {
   }
 
   .hero-left h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   .hero-right img {
