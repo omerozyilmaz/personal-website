@@ -606,6 +606,10 @@ body.dark-mode {
   .projects .project-card {
     width: 100%;
   }
+  .profile-container {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
 }
 
 @media screen and (max-width: 576px) {

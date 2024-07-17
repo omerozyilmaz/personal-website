@@ -44,7 +44,7 @@
       "dateOfBirth": "03.02.1998",
       "city": "Ankara",
       "education": "Gazi Univ. Chemical Engineer, 2022",
-      "preferredRole": "Frontend, UI",
+      "preferredRole": "Full Stack, UI",
       "aboutMe": [
         "I am an aspiring frontend developer with a growth mindset to acquire new skills and continuously develop myself with new challenges. After education and internship as a chemical engineer, I decided to fulfill my childhood dream to become a software developer and improve myself in front end by completing a 3-month intensive Workintech frontend development program"
       ]
@@ -53,10 +53,9 @@
       "dateOfBirth": "03.02.1998",
       "city": "Ankara",
       "education": "Gazi Üniv. Kimya Mühendisi, 2022",
-      "preferredRole": "Ön Yüz, UI",
+      "preferredRole": "Full Stack, UI",
       "aboutMe": [
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-        "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+        "Yeni beceriler kazanmak ve kendimi yeni zorluklarla sürekli olarak geliştirmek için büyüme zihniyetine sahip, istekli bir ön uç geliştiricisiyim. Kimya mühendisi olarak aldığım eğitim ve stajın ardından, çocukluk hayalim olan yazılımcı olmayı ve frontend konusunda kendimi geliştirmeye yönelik 3 aylık yoğun Workintech ön uç geliştirme programını tamamlayarak gerçekleştirmeye karar verdim."
       ]
     }
   },
