@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React from "react";
+import { useAppContext } from "../context/AppContext";
 
 export default function NodeSwitch() {
   const { isDarkMode, toggleDarkMode, switchLanguage, language } =
-    useContext(AppContext);
+    useAppContext();
 
   return (
     <div className="nodeSwitch">

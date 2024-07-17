@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React from "react";
+import { useAppContext } from "../context/AppContext";
 
 export default function Profile() {
-  const { appData, language } = useContext(AppContext);
+  const { appData, language } = useAppContext();
 
   if (!appData.profileData) return null;
 

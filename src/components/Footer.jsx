@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React from "react";
+import { useAppContext } from "../context/AppContext";
 
 export default function Footer() {
-  const { appData } = useContext(AppContext);
+  const { appData } = useAppContext();
 
   if (!appData.contactData) return null;
 

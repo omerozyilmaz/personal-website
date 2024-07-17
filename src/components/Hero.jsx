@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React from "react";
+import { useAppContext } from "../context/AppContext";
 import profile from "../assets/profile.png";
 import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 
 export default function Hero() {
-  const { appData, language } = useContext(AppContext);
+  const { appData, language } = useAppContext();
 
   if (!appData.heroData) return null;
 

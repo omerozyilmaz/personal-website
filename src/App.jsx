@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import NodeSwitch from "./components/NodeSwitch";
 import { AppContext } from "./context/AppContext";
 import { useContext } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const { isDarkMode } = useContext(AppContext);
@@ -27,6 +29,7 @@ function App() {
         <Projects />
       </div>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
