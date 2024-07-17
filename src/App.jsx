@@ -6,13 +6,13 @@ import Projects from "./components/Projects";
 import Profile from "./components/Profile";
 import Footer from "./components/Footer";
 import NodeSwitch from "./components/NodeSwitch";
-import { AppContext } from "./context/AppContext";
-import { useContext } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { useAppContext } from "./context/AppContext";
+
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const { isDarkMode } = useContext(AppContext);
+  const { isDarkMode } = useAppContext();
 
   return (
     <div>
@@ -22,13 +22,19 @@ function App() {
         <NodeSwitch />
         <Header />
         <Hero />
-        <Skills />
+        <section id="skills">
+          <Skills />
+        </section>
         <hr />
         <Profile />
         <hr />
-        <Projects />
+        <section id="projects">
+          <Projects />
+        </section>
       </div>
-      <Footer />
+      <section id="footer">
+        <Footer />
+      </section>
       <ToastContainer />
     </div>
   );
