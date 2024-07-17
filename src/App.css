@@ -410,7 +410,7 @@ label:active:after {
   background-color: #383838;
 }
 .heightmincard {
-  height: 180px;
+  height: 200px;
 }
 .links a {
   display: inline-block;
@@ -530,10 +530,6 @@ body.dark-mode {
     height: 350px;
     padding-top: 30px;
   }
-  .technologies {
-    padding-top: 30px;
-  }
-
   .skill {
     max-width: 250px;
   }
