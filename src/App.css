@@ -642,4 +642,8 @@ body.dark-mode {
     flex-wrap: wrap;
     justify-content: start;
   }
+
+  .about-me p {
+    font-size: 20px;
+  }
 }
