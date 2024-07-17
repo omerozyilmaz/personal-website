@@ -45,6 +45,13 @@ const AppProvider = ({ children }) => {
       return newMode;
     });
   };
+  const handleGithubClick = () => {
+    window.open("https://github.com/omerozyilmaz", "_blank");
+  };
+
+  const handleLinkedinClick = () => {
+    window.open("https://www.linkedin.com/in/omerozyilmaz/", "_blank");
+  };
 
   const switchLanguage = () => {
     setLanguage((prevLanguage) => {
@@ -65,6 +72,8 @@ const AppProvider = ({ children }) => {
         appData,
         toggleDarkMode,
         switchLanguage,
+        handleGithubClick,
+        handleLinkedinClick,
       }}
     >
       {children}

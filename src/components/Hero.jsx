@@ -5,7 +5,8 @@ import github from "../assets/github.png";
 import linkedin from "../assets/linkedin.png";
 
 export default function Hero() {
-  const { appData, language } = useAppContext();
+  const { appData, language, handleGithubClick, handleLinkedinClick } =
+    useAppContext();
 
   if (!appData.heroData) return null;
 
@@ -27,12 +28,12 @@ export default function Hero() {
         <p>{description}</p>
         <div className="hero-buttons">
           <button className="btn primary-btn">{buttons[0].text}</button>
-          <button className="btn secondary-btn">
-            <img src={github} alt="" className="scalesf" />
+          <button className="btn secondary-btn" onClick={handleGithubClick}>
+            <img src={github} alt="Github" className="scalesf" />
             {buttons[1].text}
           </button>
-          <button className="btn secondary-btn">
-            <img src={linkedin} alt="" className="scalesf" />
+          <button className="btn secondary-btn" onClick={handleLinkedinClick}>
+            <img src={linkedin} alt="LinkedIn" className="scalesf" />
             {buttons[2].text}
           </button>
         </div>
