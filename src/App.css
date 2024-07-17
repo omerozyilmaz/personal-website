@@ -528,6 +528,10 @@ body.dark-mode {
   .hero-right img {
     width: 400px;
     height: 350px;
+    padding-top: 30px;
+  }
+  .technologies {
+    padding-top: 30px;
   }
 
   .skill {
