@@ -28,9 +28,9 @@ const AppProvider = ({ children }) => {
           name: "Ömer Özyılmaz",
           job: "Frontend Developer",
         });
-        console.log("Response from API:", response.data);
+        console.log("API'den gelen yanıt:", response.data);
       } catch (error) {
-        console.error("Error posting data to API:", error);
+        console.error("API'ye veri gönderirken hata oluştu:", error);
       }
     };
 
@@ -41,10 +41,13 @@ const AppProvider = ({ children }) => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
       localStorage.setItem("isDarkMode", newMode);
-      toast.info(`Dark mode ${newMode ? "enabled" : "disabled"}`);
+      toast.info(
+        `Karanlık mod ${newMode ? "etkinleştirildi" : "devre dışı bırakıldı"}`
+      );
       return newMode;
     });
   };
+
   const handleGithubClick = () => {
     window.open("https://github.com/omerozyilmaz", "_blank");
   };
@@ -57,8 +60,9 @@ const AppProvider = ({ children }) => {
     setLanguage((prevLanguage) => {
       const newLanguage = prevLanguage === "EN" ? "TR" : "EN";
       localStorage.setItem("language", newLanguage);
-      toast.info(` ${newLanguage ? "Changed Language" : "disabled"}`);
-
+      toast.info(
+        `Dil değiştirildi: ${newLanguage === "TR" ? "Türkçe" : "İngilizce"}`
+      );
       return newLanguage;
     });
   };

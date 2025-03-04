@@ -19,7 +19,7 @@ export default function NodeSwitch() {
       </div>
       <div className="darkMode-left">
         <div className="pd-r10px">
-          {isDarkMode ? "DARK MODE" : "LIGHT MODE"}
+          {isDarkMode ? "KARANLIK MOD" : "AYDINLIK MOD"}
         </div>
         <div className="pd-r10px">|</div>
         <div onClick={switchLanguage}>

@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { useAppContext } from "../context/AppContext";
 
 export default function Header() {
+  const { language } = useAppContext();
+
   return (
     <header className="header">
       <div className="header-left">
@@ -13,17 +16,17 @@ export default function Header() {
         <nav className="nav">
           <div className="nav-item">
             <Link to="skills" smooth={true} duration={500}>
-              Skills
+              {language === "EN" ? "Skills" : "Yetenekler"}
             </Link>
           </div>
           <div className="nav-item">
             <Link to="projects" smooth={true} duration={500}>
-              Projects
+              {language === "EN" ? "Projects" : "Projeler"}
             </Link>
           </div>
           <div className="nav-item">
             <Link to="footer" smooth={true} duration={500}>
-              Hire Me
+              {language === "EN" ? "Hire Me" : "Beni İşe Al"}
             </Link>
           </div>
         </nav>

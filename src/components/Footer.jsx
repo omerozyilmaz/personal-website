@@ -2,7 +2,7 @@ import React from "react";
 import { useAppContext } from "../context/AppContext";
 
 export default function Footer() {
-  const { appData } = useAppContext();
+  const { appData, language } = useAppContext();
 
   if (!appData.contactData) return null;
 
@@ -12,7 +12,9 @@ export default function Footer() {
     <div className="frBdClr">
       <div className="contact-container">
         <h2 className="smaller-title-v2">
-          Let's work together <br /> on your next product.
+          {language === "EN"
+            ? "Let's work together on your next product."
+            : "Bir sonraki projenizde birlikte çalışalım."}
         </h2>
         <p>
           <a href={`mailto:${email}`} className="email-link">
@@ -21,7 +23,7 @@ export default function Footer() {
         </p>
         <div className="contact-links">
           <a href={personalBlog} className="contact-link">
-            Personal Blog
+            {language === "EN" ? "Personal Blog" : "Kişisel Blog"}
           </a>
           <a href={github} className="contact-link github-link">
             Github

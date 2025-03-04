@@ -25,7 +25,7 @@ const Projects = () => {
             <div key={index} className="project-card">
               <img
                 src={imageMap[project.image]}
-                alt={`${project.title} screenshot`}
+                alt={`${project.title} ekran görüntüsü`}
                 className="project-image"
               />
               <h2 className="skill-name">{project.title}</h2>
